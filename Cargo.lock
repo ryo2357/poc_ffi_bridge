@@ -9,6 +9,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a20104e2335ce8a659d6dd92a51a767a0c062599c73b343fd152cb401e828c3d"
 
 [[package]]
+name = "libc"
+version = "0.2.138"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "db6d7e329c562c5dfab7a46a2afabc8b987ab9a4834c9d1ca04dc54c1546cef8"
+
+[[package]]
 name = "poc_callback"
 version = "0.1.0"
 dependencies = [
@@ -25,3 +31,18 @@ dependencies = [
 [[package]]
 name = "poc_ffi_bridge"
 version = "0.1.0"
+
+[[package]]
+name = "poc_function_pointer"
+version = "0.1.0"
+dependencies = [
+ "cc",
+]
+
+[[package]]
+name = "pointer_callback"
+version = "0.1.0"
+dependencies = [
+ "cc",
+ "libc",
+]
