@@ -10,7 +10,10 @@ members = [
   "poc_cc",
   "poc_callback",
   "poc_function_pointer",
-  "pointer_callback"
+  "pointer_callback",
+  "pass_rust_object",
+  "pass_object_2",
+  "pass_object_3",
   ]
 
 [dependencies]
