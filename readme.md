@@ -59,6 +59,18 @@ STATUS_STACK_OVERFLOW エラーがか解決できず挫折。
 - state.cはRust構造体のset,get
 - main.cからcallback⇒state.cから構造体をget⇒構造体の編集
 
+### bridge_with_tokio
+
+tokioを使った並列処理とFFIの同時実装
+
+callback関数が同期関数なのでその中で非同期関数のSender.send()を実行する方法が思いつかない
+
+tokioランライム内でtokioランタイムを生成できない
+
+### bridge_with_sync
+
+tokioでなくstd::syncだと難なくできた。動的にスレッドを増やさない場合はstd::syncのほうが楽そう
+
 ## 参考
 
 [Rust と C言語 をコールバックで行き来する（Cブリッジが必要なVer） | d.sunnyone.org](http://d.sunnyone.org/2016/04/rust-c-cver.html)

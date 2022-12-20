@@ -14,6 +14,8 @@ members = [
   "pass_rust_object",
   "pass_object_2",
   "pass_object_3",
+  "bridge_with_tokio",
+  "bridge_with_sync",
   ]
 
 [dependencies]
