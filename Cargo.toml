@@ -16,6 +16,7 @@ members = [
   "pass_object_3",
   "bridge_with_tokio",
   "bridge_with_sync",
+  "convert_pointer"
   ]
 
 [dependencies]

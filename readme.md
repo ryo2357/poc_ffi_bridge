@@ -71,6 +71,10 @@ tokioランライム内でtokioランタイムを生成できない
 
 tokioでなくstd::syncだと難なくできた。動的にスレッドを増やさない場合はstd::syncのほうが楽そう
 
+### convert_pointer
+
+生ポインターの型変換時にメモリの状態がどうなっているか確認する
+
 ## 参考
 
 [Rust と C言語 をコールバックで行き来する（Cブリッジが必要なVer） | d.sunnyone.org](http://d.sunnyone.org/2016/04/rust-c-cver.html)
