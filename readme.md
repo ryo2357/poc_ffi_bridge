@@ -63,7 +63,7 @@ STATUS_STACK_OVERFLOW エラーがか解決できず挫折。
 
 tokioを使った並列処理とFFIの同時実装
 
-callback関数が同期関数なのでその中で非同期関数のSender.send()を実行する方法が思いつかない
+callback関数が同期関数なのでその中で非同期関数の``Sender.send().await``を実行する方法が思いつかない
 
 tokioランライム内でtokioランタイムを生成できない
 
@@ -74,6 +74,10 @@ tokioでなくstd::syncだと難なくできた。動的にスレッドを増や
 ### convert_pointer
 
 生ポインターの型変換時にメモリの状態がどうなっているか確認する
+
+### bridge_with_sync_2
+
+``mpsc::Sender<T>``構造体を構造体にラップする意味を感じない（前処理はReceiverのスレッドで行う）のでCに直接``mpsc::Sender<T>``構造体を渡してすっきりさせてみた
 
 ## 参考
 
